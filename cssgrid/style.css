@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 5px 5px 5px 5px;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vh 5vh auto;
+
+    grid-template-areas:  
+    "header"
+    "nav"
+    "main";
+}
+
+/* header */
+
+header {
+    grid-area: header;
+    background-color: black;
+}
+
+header .logo a {
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 230px;
+    margin-bottom: 30px;
+}
+
+
+@media (min-width:1280px){
+    header .logo a {
+        width: 100%;
+        height: 100%;
+        margin-top: auto;
+    }
+}
+
+@media (min-width:756px){
+    header section {
+        margin: auto auto auto auto;
+    }
+}
+
+
+@media (min-width:1024px){
+    header .logo{
+        margin-top: 200px;
+    }
+}
+
+@media (min-width:1280px){
+    header .logo {
+        width: 100%;
+        height: auto;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 5%;
+    }
+}
+
+@media (min-width:1280px){
+    header .logo {
+        width: 25%;
+        height: auto;
+    }
+}
+header .logo img {
+    width: 35vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width:1024px){
+    header .logo img {
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media (min-width:1280px){
+    header .logo img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+header .titulo {
+    color: rgb(255, 213, 5);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width:480px){
+    header .titulo {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width:1024px){
+    header .titulo {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width:480px){
+    header .titulo {
+        font-size: 3vw
+    }
+}
+
+@media (min-width:1280px){
+    header .titulo {
+        font-size: 3vw;
+    }
+}
+
+header .subtitulo {
+    color: white;
+    font-size: 3vw ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width:480px){
+    header .subtitulo{
+        font-size: 4vw;
+    }
+}
+
+@media (min-width:1024px){
+    header .subtitulo{
+        font-size: 3vw;
+    }
+}
+
+/* nav */
+
+nav {
+    grid-area: nav;
+    background-color: white;
+
+    position: sticky;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+    
+}
+
+nav ul li a {
+    font-size: 2rem;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* nav ul li:hover{
+    transform: translate(50px, 50px);
+} */
+
+nav ul li {
+   display: inline-block;
+}
+
+@media (max-width:480px){
+    nav ul li a {
+        font-size: 3vw;
+    }
+}
+
+@media (min-width: 480px){
+    nav ul li a {
+        font-size: 3vw;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width:480px){
+    nav ul li {
+        display: inline;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width:1024px){
+    nav ul li a {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width:480px){
+    nav ul li {
+        margin-top: 2px;
+    }
+}
+
+/* main */
+
+main {
+    grid-area: main;
+    background-color: rgb(255, 213, 5);
+}
+
+.tituloseccion {
+    color: black;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.titulonovedad {
+    color: black;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+main div p {
+    margin: 20px 20px 20px 20px;
+    text-align: center;
+}
+
+@media (max-width:480px){
+    .titulonovedad {
+        font-size:1rem;
+    }
+}
+
+@media (min-width: 480px){
+    .titulonovedad {
+        font-size: 25px;
+    }
+}
+
+section div video {
+    width: 100vw;
+    height: auto;
+}
+
+section article div img {
+    width: 100vw;
+    height: auto;
+}
+
+aside div img {
+    width: 100vw;
+    height: auto;
+}
+
+/* pagina noticias */
+
+main div img {
+    width: 100vw;
+    height: auto;
+}
+
+main div video {
+    width: 100vw;
+    height: auto;
+}
+
+/* pagina evento */
+
+@media (max-width:480px){
+    .iframe iframe {
+        width: 100vw;
+        height: auto;
+    }
+}
+
+@media (min-width:480px){
+    .iframe iframe {
+        width: 100vw;
+        height: auto;
+    }
+}
+
+@media (min-width:1280px){
+    .iframe iframe {
+        width: 1280px;
+        height: 1024px;
+    }
+}
+
+/* pagina galeria */
+
+.galeriaimg {
+    width: 25vw;
+    height: auto;
+}
+
+/* pagina contacto */
+
+section form div label {
+    color: black;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 30px 5px 30px 20px;
+}
+
+section form div textarea {
+    width: 70vw;
+    height: auto;
+    margin: 30px 5px 30px 20px;
+}
+
+section form div input {
+    color: black;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin:30px 5px 30px 20px;
+}
+
+/* footer */
+
+footer {
+    background-color: white;
+    width: 100vw;
+    height: 5vh;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3%;
+}
+
+footer ul li {
+    display: inline-block;
+}
+
+footer ul li a {
+    font-size: 2rem;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+@media (max-width:480px){
+    footer ul li a {
+        font-size:3vw;
+    }
+}
+
+@media (min-width:480px){
+    footer ul li a {
+        font-size: 3vw;
+        margin-top: 15px;
+    }
+}
+
+@media (min-width:1024px){
+    footer ul li a {
+        font-size: 2vw;
+    }
+}
