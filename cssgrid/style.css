@@ -18,6 +18,22 @@ body {
     "main";
 }
 
+.botonvolver {
+    margin-right: 10%;
+    border-radius: 3px solid black;
+    margin-top: 5rem;
+    position: fixed;
+}
+
+.botonvolver h5 {
+    font-size: 200%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(255, 213, 5);
+    text-shadow: 2px 4px black;
+}
+
+
+
 /* header */
 
 header {
@@ -165,8 +181,6 @@ nav {
     background-color: white;
     width: 100%;
     height: auto;
-    position: sticky;
-    margin-top: 5px;
 }
 
 nav ul {
@@ -197,9 +211,9 @@ nav ul li a {
     text-shadow: 2px 4px rgb(255, 213, 5);
 }
 
-/* nav ul li:hover{
+nav ul li:hover{
     transform: translate(50px, 50px);
-} */
+}
 
 nav ul li {
    display: inline-block;
@@ -295,6 +309,11 @@ main {
     text-shadow: 2px 4px rgb(255, 213, 5);
 }
 
+.tituloseccion a {
+    text-decoration: none;
+    color: white;
+}
+
 .titulonovedad {
     color: black;
     font-size: 1rem;
@@ -340,6 +359,11 @@ section div video {
 section article div img {
     width: 100%;
     height: auto;
+}
+
+.seccionnovedad article div a {
+    text-decoration: none;
+    color: black;
 }
 
 aside div img {
