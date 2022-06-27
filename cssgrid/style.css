@@ -5,6 +5,8 @@
 }
 
 body {
+    width: 100%;
+    height: auto;
     margin: 5px 5px 5px 5px;
     display: grid;
     grid-template-columns: 100vw;
@@ -163,15 +165,14 @@ nav {
     background-color: white;
     width: 100%;
     height: auto;
-
     position: sticky;
+    margin-top: 5px;
 }
 
 nav ul {
     display: flex;
     justify-content: space-around;
     margin-top: 5px;
-    
 }
 
 @media (max-width:1024px){
@@ -246,40 +247,41 @@ main {
 
     grid-area: main;
     /* background-color: rgb(255, 213, 5); */
-    background-image: linear-gradient(to right, yellow, purple);    
+    background-image: linear-gradient(to right, yellow, purple);
 }
 
-/* @media(min-width:1024px){
+@media(min-width:1024px){
     main {
+        display: grid;
         grid-template-columns: 80% 20%;
-        grid-template-rows: 45% 45% 5%;
+        grid-template-rows: 59% 40% 5%;
 
-        grid-template-areas: 
+        /* grid-template-areas: 
         "novedades" "galeria"
         "eventos" "galeria"
-        "footer""footer";
+        "footer""footer"; */
     }
 
     .seccionnovedad {
-        grid-area: novedades;
-    }
-
-    .secciongaleria {
-        grid-area: galeria;
+        grid-column: 1/2;
+        grid-row: 1/2;
     }
 
     .seccioneventos {
-        grid-area: eventos;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    footer {
+        grid-column: 1/3;
+        grid-row: 3/4;
     }
 
     .secciongaleria {
-        grid-area: galeria;
+        grid-column: 2/3;
+        grid-row: 1/3;
     }
-
-    .footer {
-        grid-area: footer;
-    }
-} */
+}
 
 .tituloseccion {
     color: black;
@@ -326,6 +328,15 @@ section div video {
     height: auto;
 }
 
+@media(min-width:1024px){
+    .seccioneventos div video {
+        width: 100%;
+        height: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+
 section article div img {
     width: 100%;
     height: auto;
@@ -336,9 +347,25 @@ aside div img {
     height: auto;
 }
 
+@media(min-width:1024px){
+    .secciongaleria div img {
+        width: 100%;
+        height: auto; 
+    }
+}
+
 aside div {
     width: 50%;
     height: auto;
+}
+
+@media(min-width:1024px){
+    .secciongaleria div {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: auto;
+    }
 }
 
 /* pagina noticias */
@@ -351,6 +378,30 @@ main div img {
 main div video {
     width: 100vw;
     height: auto;
+}
+
+@media(min-width:1024px){
+    main .noticiasimg {
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+
+    main .noticiasimg img {
+        width: 100%;
+        height: auto;
+        margin-top: 5%;
+    }
+
+   .paginanoticias .noticiasvideo video {
+       width: 100%;
+       height: auto;
+   }
+
+
+    main div p {
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
 }
 
 /* pagina evento */
@@ -376,6 +427,23 @@ main div video {
     }
 }
 
+@media(min-width:1024px){
+    .paginaeventos {
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+
+    .paginaeventos div iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .paginaeventos div video {
+        width: 100%;
+        height: auto;
+    }
+}
+
 /* pagina galeria */
 
 .galeriaimg {
@@ -383,7 +451,71 @@ main div video {
     height: auto;
 }
 
+@media(min-width:1024px){
+
+    .paginagaleria {
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+
+    .paginagaleria div {
+        grid-column: 1/3;
+        grid-row: 1/3;
+
+        width: 90%;
+        height: auto;
+    }
+
+    .paginagaleria div img {
+        width: 95%;
+        height: auto;
+        margin: 50px;
+    }
+
+
+    .paginagaleria footer {
+        grid-column: 1/3;
+        grid-row: 3/4;
+
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* pagina podcast */
+
+@media(min-width:1024px){
+    .paginapodcast {
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+
+    main .paginapodcast div iframe {
+        display: flex;
+        justify-self: auto;
+        align-self: auto;
+    }
+
+    
+}
+
+/* pagina nosotros */
+
+@media(min-width:1024px){
+    .paginanosotros {
+        grid-column: 1/3;
+        grid-row:1/3 ;
+    }
+}
+
 /* pagina contacto */
+
+@media(min-width:1024px){
+    .paginacontacto {
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+}
 
 section form div label {
     color: black;
